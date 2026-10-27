@@ -1,0 +1,47 @@
+rules:
+  - id: vibesec.dynamic-eval
+    languages: [javascript, typescript]
+    message: Evaluasi kode dinamis perlu ditinjau jika input dapat dikendalikan pengguna.
+    severity: ERROR
+    pattern-either:
+      - pattern: eval(...)
+      - pattern: new Function(...)
+    metadata:
+      cwe: ["CWE-95"]
+      remediation: Hindari evaluasi string sebagai kode; gunakan parser atau fungsi yang sudah ditentukan.
+      references: ["https://cwe.mitre.org/data/definitions/95.html"]
+  - id: vibesec.html-injection
+    languages: [javascript, typescript]
+    message: Penulisan HTML langsung perlu sanitasi bila nilai berasal dari input tidak tepercaya.
+    severity: WARNING
+    pattern-either:
+      - pattern: $EL.innerHTML = $VALUE
+      - pattern: $EL.outerHTML = $VALUE
+      - pattern: $EL.insertAdjacentHTML($POSITION, $VALUE)
+    metadata:
+      cwe: ["CWE-79"]
+      remediation: Gunakan textContent untuk teks atau sanitizer HTML yang sesuai.
+      references: ["https://cwe.mitre.org/data/definitions/79.html"]
+  - id: vibesec.shell-execution
+    languages: [javascript, typescript]
+    message: Perintah shell dinamis perlu ditinjau untuk kemungkinan command injection.
+    severity: ERROR
+    patterns:
+      - pattern-either:
+          - pattern: $CP.exec($COMMAND, ...)
+          - pattern: $CP.execSync($COMMAND, ...)
+      - pattern-not: $CP.exec("...", ...)
+      - pattern-not: $CP.execSync("...", ...)
+    metadata:
+      cwe: ["CWE-78"]
+      remediation: Gunakan execFile/spawn tanpa shell dan validasi argumen pada batas input.
+      references: ["https://cwe.mitre.org/data/definitions/78.html"]
+  - id: vibesec.tls-verification-disabled
+    languages: [javascript, typescript]
+    message: Verifikasi sertifikat TLS dinonaktifkan.
+    severity: ERROR
+    pattern: "{..., rejectUnauthorized: false, ...}"
+    metadata:
+      cwe: ["CWE-295"]
+      remediation: Aktifkan verifikasi sertifikat dan gunakan trust store yang benar.
+      references: ["https://cwe.mitre.org/data/definitions/295.html"]

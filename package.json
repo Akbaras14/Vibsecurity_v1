@@ -1,0 +1,18 @@
+{
+  "name": "vibesec",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "test:backend": "python -m unittest backend.test_backend -v",
+    "test:web": "node scripts/smoke-web.mjs"
+  },
+  "dependencies": {
+    "next": "16.3.8",
+    "react": "19.2.8",
+    "react-dom": "19.2.8"
+  },
+  "devDependencies": { "playwright": "1.63.0" }
+}

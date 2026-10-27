@@ -1,0 +1,42 @@
+import assert from 'node:assert/strict';
+import { chromium } from 'playwright';
+const api = 'http://127.0.0.1:8000/api';
+const scan = process.argv[2];
+assert(scan, 'Pass a completed scan ID');
+const report = await fetch(`${api}/scans/${scan}/export`).then(r => r.json());
+const finding = report.findings.find(f => f.automatic?.project_risk?.status === 'estimated');
+assert(finding, 'A conditional risk scenario must exist');
+assert.equal(report.research_protocol.context_policy, 'CTX1');
+assert(report.summary.risk_analysis.estimated > 0);
+const filtered = await fetch(`${api}/scans/${scan}/findings?risk=${finding.automatic.project_risk.category}`).then(r => r.json());
+assert(filtered.data.some(f => f.id === finding.id));
+const browser = await chromium.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true });
+try {
+  const page = await browser.newPage();
+  const errors = [];
+  page.on('pageerror', e => errors.push(e.message));
+  await page.goto('http://127.0.0.1:3000/dashboard');
+  const guide = page.getByText('Cara kerja VibeSec dalam 5 langkah', { exact: true });
+  await guide.waitFor();
+  await guide.click();
+  await page.getByText('Tiga hal yang berbeda:', { exact: true }).waitFor();
+  await page.goto(`http://127.0.0.1:3000/scans/${scan}/findings/${finding.id}`);
+  await page.getByRole('heading', { name: 'Analisis risiko proyek', exact: true }).waitFor();
+  const technical = page.getByText('Rincian prioritas teknis dari advisory (A1)', { exact: true });
+  assert.equal(await technical.locator('..').getAttribute('open'), null);
+  const section = page.locator('section').filter({ has: page.getByRole('heading', { name: 'Analisis risiko proyek', exact: true }) });
+  await section.locator('details').first().locator('summary').click();
+  await section.getByText('Asumsi yang belum dibuktikan:', { exact: true }).first().waitFor();
+  await section.getByText('Bukti yang diamati:', { exact: true }).first().waitFor();
+  assert.equal(await page.locator('form').count(), 0);
+  await page.setViewportSize({ width: 390, height: 844 });
+  assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth), false);
+  await page.goto(`http://127.0.0.1:3000/scans/${scan}/report`);
+  await page.getByRole('heading', { name: 'Laporan analisis risiko keamanan', exact: true }).waitFor();
+  await page.getByRole('heading', { name: 'Persentase estimasi risiko bersyarat dari temuan berskor RA1' }).waitFor();
+  assert.equal(await page.getByText('Penilaian historis', { exact: true }).count(), report.findings.filter(f => !f.automatic).length);
+  assert.deepEqual(errors, []);
+  console.log('RA1 API, filter, scenarios, assumptions, report and mobile checks passed.');
+} finally {
+  await browser.close();
+}

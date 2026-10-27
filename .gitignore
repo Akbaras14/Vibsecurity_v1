@@ -1,0 +1,20 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+npm-debug.log*
+storage/
+.venv*/
+uploads/
+__pycache__/
+*.pyc
+.cache/
+*.log
+
+# Dokumen skripsi pribadi dan berkas lokal yang tidak diperlukan aplikasi.
+/*.docx
+/skripsi_revisi/
+/netsh
+/New-NetFirewallRule
+/examples/*.zip

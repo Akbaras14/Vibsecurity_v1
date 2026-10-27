@@ -1,0 +1,219 @@
+{
+  "repository": "https://github.com/semgrep/semgrep-rules",
+  "commit": "16b9e6d45f10649f6a531ec4838ed9924372c3bc",
+  "groups": [
+    "javascript/lang/security",
+    "typescript/lang/security",
+    "typescript/react/security"
+  ],
+  "files": [
+    {
+      "path": "javascript/lang/security/audit/code-string-concat.yaml",
+      "sha256": "6a1d29327dd908382bdf9109e223f6ed4ca6167ae2be6617b59191c892e3c0cc"
+    },
+    {
+      "path": "javascript/lang/security/audit/dangerous-spawn-shell.yaml",
+      "sha256": "1a81f91e9ad9ea4c62a9b0bda4dcf3cf2fc1bb6f2d9e2580ea3effa6bfe9ba74"
+    },
+    {
+      "path": "javascript/lang/security/audit/detect-non-literal-fs-filename.yaml",
+      "sha256": "3a7da5626cf3186380f3be1daf1ed38ba766075912d9b0dcd7ae73b7c51bb42e"
+    },
+    {
+      "path": "javascript/lang/security/audit/detect-non-literal-regexp.yaml",
+      "sha256": "cc2b78967131265c24e9700f36195ef1f3ba11f651598ee8a583e900c60e03fc"
+    },
+    {
+      "path": "javascript/lang/security/audit/detect-non-literal-require.yaml",
+      "sha256": "f02a0340092111bfea7df82492e9f1ad12071403984b9c863c3f755bc815d8c5"
+    },
+    {
+      "path": "javascript/lang/security/audit/detect-redos.yaml",
+      "sha256": "c649d508a43408dee1339e4f49415cbfb1cacfc7b1cafb7cb22ba81f335665bb"
+    },
+    {
+      "path": "javascript/lang/security/audit/hardcoded-hmac-key.yaml",
+      "sha256": "fdca07b8fc42fa0d1e24be2a372e719f21b09c060f09716ee7008a1df1dfd52a"
+    },
+    {
+      "path": "javascript/lang/security/audit/incomplete-sanitization.yaml",
+      "sha256": "54b042cc05900fd624852cac1bb4962c2d33a0674d468b4a61a6fae8d2a64250"
+    },
+    {
+      "path": "javascript/lang/security/audit/md5-used-as-password.yaml",
+      "sha256": "95f8166a5066f012641c89fbc59e9ee98299f886cb70d2057b1e6cc741561b33"
+    },
+    {
+      "path": "javascript/lang/security/audit/path-traversal/path-join-resolve-traversal.yaml",
+      "sha256": "d9a1c9b559fee5b993bb9150fead40a48570a58f08762d7b6674125f6e0784bc"
+    },
+    {
+      "path": "javascript/lang/security/audit/prototype-pollution/prototype-pollution-assignment.yaml",
+      "sha256": "c494050bfb86b17b96497f1acb6f2cffe68890c2658e3ccf36945c6fda61e67d"
+    },
+    {
+      "path": "javascript/lang/security/audit/prototype-pollution/prototype-pollution-loop.yaml",
+      "sha256": "f781360a7d929bea0dacf339e30060e441f9e738aee0d1b6481219fea49126c5"
+    },
+    {
+      "path": "javascript/lang/security/audit/spawn-shell-true.yaml",
+      "sha256": "452fb593301edca721a151ed3c051f428ca1df1fc1af613380d58b076601b5ba"
+    },
+    {
+      "path": "javascript/lang/security/audit/sqli/node-knex-sqli.yaml",
+      "sha256": "074be35c73756917896e051a8d77a8a705c7ef54d4846d7a93c829e4d68aabd2"
+    },
+    {
+      "path": "javascript/lang/security/audit/sqli/node-mssql-sqli.yaml",
+      "sha256": "a3c995249bdd6ffbf3d36ba42cdd1f1c04798bb0e41765bd396a218516e59ee9"
+    },
+    {
+      "path": "javascript/lang/security/audit/sqli/node-mysql-sqli.yaml",
+      "sha256": "152d5848cbcb5bdd3555507eb4a55b5ee2cd7276effbd5975a7da97d82bba0d0"
+    },
+    {
+      "path": "javascript/lang/security/audit/sqli/node-postgres-sqli.yaml",
+      "sha256": "23709e35b9ce213d8306c793a3174320dcf3141043e31297fcdec48735c1bbd8"
+    },
+    {
+      "path": "javascript/lang/security/audit/unknown-value-with-script-tag.yaml",
+      "sha256": "c22e6be10888c9c457ddfb8d75dd70e812d0c9667e9b3bd910e3f3bc504d8892"
+    },
+    {
+      "path": "javascript/lang/security/audit/unsafe-dynamic-method.yaml",
+      "sha256": "3608be77e1a11f4a4b756b9ccf8cd95e8e93c311f84a69e5483c5af560d5d790"
+    },
+    {
+      "path": "javascript/lang/security/audit/unsafe-formatstring.yaml",
+      "sha256": "6e0f93aaccf1eb08bd02bd160768d41dda2a3b5de2a26d55e18f417ee0ff408c"
+    },
+    {
+      "path": "javascript/lang/security/detect-buffer-noassert.yaml",
+      "sha256": "e6566d2c7138b038e1c3167f3e9ff98550cf81a2d70caa94a5362a55294077f6"
+    },
+    {
+      "path": "javascript/lang/security/detect-child-process.yaml",
+      "sha256": "baee696b05b3c38fa5a82435ae458026ec81ce9a6e6a73116d68dc963496296c"
+    },
+    {
+      "path": "javascript/lang/security/detect-disable-mustache-escape.yaml",
+      "sha256": "8d6d81249121230be2d11fd7a2cce2ce23837520f8e0fc1df45868ec159edb09"
+    },
+    {
+      "path": "javascript/lang/security/detect-eval-with-expression.yaml",
+      "sha256": "3b8fe2524b094c72c34aaa6d21b0408ffdac2471a335125cf726993253777951"
+    },
+    {
+      "path": "javascript/lang/security/detect-insecure-websocket.yaml",
+      "sha256": "65935c49d62e264a6b85a496455989137d7e82d4698855d511d173ed08ad3099"
+    },
+    {
+      "path": "javascript/lang/security/detect-no-csrf-before-method-override.yaml",
+      "sha256": "d361537a89c773a4940f107a2e787c6309d121e965a88f471b55d0db15ccb859"
+    },
+    {
+      "path": "javascript/lang/security/detect-pseudoRandomBytes.yaml",
+      "sha256": "d3c2b2168e6b1efdfc305a783387634e3ead8e0db6d4bdd3417381e177da4058"
+    },
+    {
+      "path": "javascript/lang/security/html-in-template-string.yaml",
+      "sha256": "1c32479fb6228a0a3a3618e6308b5bdfec14f05f7cf12a2321519b4095cf117d"
+    },
+    {
+      "path": "javascript/lang/security/insecure-object-assign.yaml",
+      "sha256": "bc5a5fdef1a8a4889f1d3efebdd3cb1f1e58f5261418928ae6c765eb7f1b2397"
+    },
+    {
+      "path": "javascript/lang/security/spawn-git-clone.yaml",
+      "sha256": "d87fdf812e1a61f137bde701d75415525ea66c45c593374a6f9ec2081609539f"
+    },
+    {
+      "path": "typescript/lang/security/audit/cors-regex-wildcard.yaml",
+      "sha256": "fc271110d672f2093bf1e949ab413e6117f7483ad6e285ef093096d77fb33821"
+    },
+    {
+      "path": "typescript/react/security/audit/react-dangerouslysetinnerhtml.yaml",
+      "sha256": "794094512be7f7dcaa49a4b1edf621dbdf1f984b4f29ab09a23538c0e59c2136"
+    },
+    {
+      "path": "typescript/react/security/audit/react-href-var.yaml",
+      "sha256": "aa8ade23b4a351f93be2bcd47ecc694b6b3d2a861a65fc8d345a6cb87f9253f2"
+    },
+    {
+      "path": "typescript/react/security/audit/react-jwt-decoded-property.yaml",
+      "sha256": "5e4ca6b6fa672c29cfbf78993f8b3b5724d77fd99da251de7b108835705fec15"
+    },
+    {
+      "path": "typescript/react/security/audit/react-jwt-in-localstorage.yaml",
+      "sha256": "8850734261ecbb6eee29707a683acc5d177b2d785cec00ef4788eb6193b5ba05"
+    },
+    {
+      "path": "typescript/react/security/audit/react-unsanitized-method.yaml",
+      "sha256": "c774bae09d1b0d8c4c12c32436f4dad6d93a590f9cfbd159bc2ab2416054d273"
+    },
+    {
+      "path": "typescript/react/security/audit/react-unsanitized-property.yaml",
+      "sha256": "0dc00b10abae599731f0c4f56c9efc64cf2469dfa4cc0d562ca6a3a0581be59d"
+    },
+    {
+      "path": "typescript/react/security/react-insecure-request.yaml",
+      "sha256": "4869905cc60559b8ca0ed0ac62c5abe9a26b2ee0e3bbdc0d1baf47271ee70376"
+    },
+    {
+      "path": "typescript/react/security/react-markdown-insecure-html.yaml",
+      "sha256": "e464c0f72c8a89ae325524b738c7c2024be1258e7a060a6365b487a0aa284434"
+    }
+  ],
+  "rule_ids": [
+    "javascript.lang.security.audit.dangerous-spawn-shell",
+    "javascript.lang.security.audit.detect-non-literal-fs-filename",
+    "javascript.lang.security.audit.detect-non-literal-regexp",
+    "javascript.lang.security.audit.detect-non-literal-require",
+    "javascript.lang.security.audit.detect-redos",
+    "javascript.lang.security.audit.incomplete-sanitization",
+    "javascript.lang.security.audit.md5-used-as-password",
+    "javascript.lang.security.audit.path-traversal.path-join-resolve-traversal",
+    "javascript.lang.security.audit.prototype-pollution.prototype-pollution-assignment",
+    "javascript.lang.security.audit.prototype-pollution.prototype-pollution-loop",
+    "javascript.lang.security.audit.spawn-shell-true",
+    "javascript.lang.security.audit.sqli.node-knex-sqli",
+    "javascript.lang.security.audit.sqli.node-mssql-sqli",
+    "javascript.lang.security.audit.sqli.node-mysql-sqli",
+    "javascript.lang.security.audit.sqli.node-postgres-sqli",
+    "javascript.lang.security.audit.unknown-value-with-script-tag",
+    "javascript.lang.security.audit.unsafe-dynamic-method",
+    "javascript.lang.security.audit.unsafe-formatstring",
+    "javascript.lang.security.detect-buffer-noassert",
+    "javascript.lang.security.detect-child-process",
+    "javascript.lang.security.detect-disable-mustache-escape",
+    "javascript.lang.security.detect-eval-with-expression",
+    "javascript.lang.security.detect-insecure-websocket",
+    "javascript.lang.security.detect-no-csrf-before-method-override",
+    "javascript.lang.security.detect-pseudoRandomBytes",
+    "javascript.lang.security.html-in-template-string",
+    "javascript.lang.security.insecure-object-assign",
+    "javascript.lang.security.spawn-git-clone",
+    "typescript.lang.security.audit.cors-regex-wildcard",
+    "typescript.react.security.audit.react-dangerouslysetinnerhtml",
+    "typescript.react.security.audit.react-href-var",
+    "typescript.react.security.audit.react-jwt-decoded-property",
+    "typescript.react.security.audit.react-jwt-in-localstorage",
+    "typescript.react.security.audit.react-unsanitized-method",
+    "typescript.react.security.audit.react-unsanitized-property",
+    "typescript.react.security.react-insecure-request",
+    "typescript.react.security.react-markdown-insecure-html"
+  ],
+  "excluded": [
+    {
+      "path": "javascript/lang/security/audit/code-string-concat.yaml",
+      "id": "code-string-concat",
+      "reason": "Requires separate compatibility review"
+    },
+    {
+      "path": "javascript/lang/security/audit/hardcoded-hmac-key.yaml",
+      "id": "hardcoded-hmac-key",
+      "reason": "Requires separate compatibility review"
+    }
+  ],
+  "sha256": "8cbfdd26c89c94e983d525487ae22ae4af9bd07b266733ed212a38ff312b3dc4"
+}

@@ -1,0 +1,4 @@
+* text=auto
+*.sh text eol=lf
+backend/rules/*.yml -text
+backend/rules/*.json -text

@@ -1,0 +1,3 @@
+ctranslate2==4.6.0
+subword-nmt==0.3.8
+sacremoses==0.1.1

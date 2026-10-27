@@ -1,0 +1,29 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f5f7f5; color: #20352d; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.6; }
+main { width: min(720px, 100%); margin: 70px auto; padding: 0 22px; }
+.eyebrow { font-size: 11px; letter-spacing: .12em; color: #536b60; }
+h1 { font-size: 40px; line-height: 1.2; margin: 18px 0 12px; }
+.intro, .note { color: #53665c; }
+.panel { background: white; padding: 28px; border: 1px solid #d8e1db; border-radius: 12px; margin: 26px 0; }
+label { display: block; font-size: 14px; font-weight: 600; }
+.entry { display: flex; gap: 10px; margin-top: 8px; }
+input, select, button { font: inherit; }
+input:not([type=checkbox]), select { border: 1px solid #9eafa4; background: white; border-radius: 6px; padding: 10px 12px; min-width: 0; }
+.entry input { flex: 1; width: 100%; }
+button { cursor: pointer; background: #235e47; color: white; border: 1px solid transparent; border-radius: 6px; padding: 10px 15px; }
+button:disabled { opacity: .5; cursor: default; }
+:focus-visible { outline: 3px solid #78a892; outline-offset: 3px; }
+.toolbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin: 22px 0 10px; }
+.toolbar p { font-size: 14px; }
+.toolbar label { display: flex; align-items: center; gap: 8px; font-size: 12px; }
+ul { list-style: none; padding: 0; margin: 0; }
+li { display: flex; align-items: center; gap: 15px; justify-content: space-between; padding: 16px 0; border-top: 1px solid #e4eae6; }
+li label { display: flex; align-items: center; gap: 12px; min-width: 0; font-size: 16px; font-weight: 400; }
+li span { overflow-wrap: anywhere; }
+input[type=checkbox] { width: 20px; height: 20px; accent-color: #235e47; flex-shrink: 0; }
+.done span { text-decoration: line-through; color: #6e7c73; }
+.remove { background: transparent; color: #8b3834; font-size: 13px; flex-shrink: 0; }
+.empty { text-align: center; color: #5d6d62; padding: 25px 0; }
+.message { background: #fff5df; color: #674711; padding: 12px; border-radius: 6px; }
+.note { font-size: 13px; }
+@media (max-width: 520px) { main { margin: 30px auto; } .panel { padding: 18px; } .toolbar { align-items: flex-start; flex-direction: column; gap: 4px; } .entry { flex-direction: column; } h1 { font-size: 32px; } }

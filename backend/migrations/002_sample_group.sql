@@ -1,0 +1,1 @@
+ALTER TABLE projects ADD COLUMN sample_group VARCHAR(32) NOT NULL DEFAULT '';
